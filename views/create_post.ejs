@@ -1,0 +1,49 @@
+<!--
+  Heads up! 👋
+
+  Plugins:
+    - @tailwindcss/forms
+-->
+
+<div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-lg text-center">
+      <h1 class="text-2xl font-bold sm:text-3xl">Create a post</h1>
+    </div>
+  
+    <form action="/posts/create" method="POST" class="mx-auto mb-0 mt-8 max-w-md space-y-4">
+        <div>
+            <label for="title">Title</label>
+            <div class="relative">
+                <input
+                    id="title"
+                    type="text"
+                    class="w-full rounded-lg border p-4 pe-12 text-sm shadow-sm focus:outline-none"
+                    name="title"
+                    required
+                />
+            </div>
+        </div>
+    
+        <div>
+            <label for="content">Body</label>
+            <div class="relative">
+                <textarea
+                    id="content"
+                    class="w-full rounded-lg border p-4 pe-12 text-sm shadow-sm focus:outline-none"
+                    name="content"
+                    required
+                ></textarea>
+            </div>
+        </div>
+    
+        <div class="flex items-center justify-between">  
+            <button
+                type="submit"
+                class="inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white"
+            >
+                Post
+            </button>
+        </div>
+    </form>
+    
+</div>
